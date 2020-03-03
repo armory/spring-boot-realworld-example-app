@@ -18,7 +18,7 @@ spec:
         - image: 'nginx:latest'
           name: realworldbackend
           ports:
-            - containerPort: 8080
+            - containerPort: ${parameters.containerPort}
 ---
 apiVersion: v1
 kind: Service
@@ -27,9 +27,9 @@ metadata:
   name: backend
 spec:
   ports:
-    - port: 80
+    - port: ${parameters.loadbalancerPort}
       protocol: TCP
-      targetPort: 8080
+      targetPort: ${parameters.containerPort}
   selector:
     app: realworldbackend
   type: LoadBalancer
