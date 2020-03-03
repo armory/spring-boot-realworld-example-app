@@ -18,7 +18,7 @@ spec:
         - image: 'nginx:latest'
           name: realworldbackend
           ports:
-            - containerPort: ${parameters.containerPort}
+            - containerPort: ${#toInt(parameters.containerPort)}
 ---
 apiVersion: v1
 kind: Service
@@ -29,7 +29,7 @@ spec:
   ports:
     - port: ${parameters.loadbalancerPort}
       protocol: TCP
-      targetPort: ${parameters.containerPort}
+      targetPort: ${#toInt(parameters.containerPort)}
   selector:
     app: realworldbackend
   type: LoadBalancer
