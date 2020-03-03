@@ -27,7 +27,7 @@ metadata:
   name: backend
 spec:
   ports:
-    - port: ${parameters.loadbalancerPort}
+    - port: ${#toInt(parameters.loadbalancerPort)}
       protocol: TCP
       targetPort: ${#toInt(parameters.containerPort)}
   selector:
