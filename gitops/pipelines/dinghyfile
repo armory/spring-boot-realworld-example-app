@@ -66,7 +66,7 @@
                     "moniker": {
                         "app": "realworldcontroller"
                     },
-                    "name": "Deploy to Dev",
+                    "name": "Deploy Dev",
                     "namespaceOverride": "dev",
                     "refId": "1",
                     "requisiteStageRefIds": [],
