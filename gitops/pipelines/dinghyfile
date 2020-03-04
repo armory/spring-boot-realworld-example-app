@@ -1,5 +1,5 @@
 {
-    "application": "realworldcontroller",
+    "application": "springbootdemo",
     "pipelines": [
         {
             "expectedArtifacts": [
@@ -64,7 +64,7 @@
                     "manifestArtifactAccount": "Armory",
                     "manifestArtifactId": "a8c52970-fe92-4759-a645-6602809a4ade",
                     "moniker": {
-                        "app": "realworldcontroller"
+                        "app": "springbootdemo"
                     },
                     "name": "Deploy Dev",
                     "namespaceOverride": "dev",
