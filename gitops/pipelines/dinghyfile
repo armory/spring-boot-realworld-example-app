@@ -70,7 +70,7 @@
                     "moniker": {
                         "app": "springbootdemo"
                     },
-                    "name": "Deploy to Dev",
+                    "name": "Deploy Dev",
                     "namespaceOverride": "dev",
                     "refId": "1",
                     "requisiteStageRefIds": [],
@@ -86,8 +86,7 @@
                     "type": "deployManifest"
                 }
             ],
-            "triggers": [],
-            "updateTs": "1583280990000"
+            "triggers": []
         }
     ]
 }
