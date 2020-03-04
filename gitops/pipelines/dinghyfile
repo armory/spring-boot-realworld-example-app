@@ -88,5 +88,8 @@
             ],
             "triggers": []
         }
-    ]
+    ],
+    "spec": {
+        "email": "andrew.way@armory.io"
+    }
 }
