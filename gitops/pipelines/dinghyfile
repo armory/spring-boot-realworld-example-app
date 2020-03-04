@@ -70,7 +70,7 @@
                     "moniker": {
                         "app": "springbootdemo"
                     },
-                    "name": "Deploy Dev",
+                    "name": "Deploy to Dev",
                     "namespaceOverride": "dev",
                     "refId": "1",
                     "requisiteStageRefIds": [],
