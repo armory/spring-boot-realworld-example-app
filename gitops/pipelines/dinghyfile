@@ -89,8 +89,5 @@
             "triggers": [],
             "updateTs": "1583280990000"
         }
-    ],
-    "spec": {
-        "email": "andrew.way@armory.io"
-    }
+    ]
 }
