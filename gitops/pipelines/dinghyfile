@@ -2,6 +2,10 @@
     "application": "springbootdemo",
     "pipelines": [
         {
+            "application": "springbootdemo",
+            "keepWaitingPipelines": false,
+            "limitConcurrent": true,
+            "name": "deploy (gitops)",
             "expectedArtifacts": [
                 {
                     "defaultArtifact": {
