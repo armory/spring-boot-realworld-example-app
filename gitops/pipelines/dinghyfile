@@ -1,89 +1,91 @@
 {
     "application": "realworldcontroller",
-    "pipelines": {
-        "expectedArtifacts": [
-            {
-                "defaultArtifact": {
-                    "artifactAccount": "Armory",
-                    "id": "02d9f5b9-8e70-4f29-ac8c-0545b772d9ed",
-                    "name": "gitops/k8s/deployment.yaml",
-                    "reference": "https://api.github.com/repos/armory/spring-boot-realworld-example-app/contents/gitops/k8s/deployment.yaml",
-                    "type": "github/file",
-                    "version": "setupdinghy"
+    "pipelines": [
+        {
+            "expectedArtifacts": [
+                {
+                    "defaultArtifact": {
+                        "artifactAccount": "Armory",
+                        "id": "02d9f5b9-8e70-4f29-ac8c-0545b772d9ed",
+                        "name": "gitops/k8s/deployment.yaml",
+                        "reference": "https://api.github.com/repos/armory/spring-boot-realworld-example-app/contents/gitops/k8s/deployment.yaml",
+                        "type": "github/file",
+                        "version": "setupdinghy"
+                    },
+                    "displayName": "deployment.yaml",
+                    "id": "a8c52970-fe92-4759-a645-6602809a4ade",
+                    "matchArtifact": {
+                        "artifactAccount": "Armory",
+                        "id": "f8234cc0-3907-4ce9-848d-1f062f0127e3",
+                        "name": "gitops/k8s/deployment.yaml",
+                        "type": "github/file"
+                    },
+                    "useDefaultArtifact": true,
+                    "usePriorArtifact": false
+                }
+            ],
+            "keepWaitingPipelines": false,
+            "lastModifiedBy": "away168",
+            "limitConcurrent": true,
+            "parameterConfig": [
+                {
+                    "default": "80",
+                    "description": "Port for Container",
+                    "hasOptions": false,
+                    "label": "",
+                    "name": "containerPort",
+                    "options": [
+                        {
+                            "value": ""
+                        }
+                    ],
+                    "pinned": true,
+                    "required": true
                 },
-                "displayName": "deployment.yaml",
-                "id": "a8c52970-fe92-4759-a645-6602809a4ade",
-                "matchArtifact": {
-                    "artifactAccount": "Armory",
-                    "id": "f8234cc0-3907-4ce9-848d-1f062f0127e3",
-                    "name": "gitops/k8s/deployment.yaml",
-                    "type": "github/file"
-                },
-                "useDefaultArtifact": true,
-                "usePriorArtifact": false
-            }
-        ],
-        "keepWaitingPipelines": false,
-        "lastModifiedBy": "away168",
-        "limitConcurrent": true,
-        "parameterConfig": [
-            {
-                "default": "80",
-                "description": "Port for Container",
-                "hasOptions": false,
-                "label": "",
-                "name": "containerPort",
-                "options": [
-                    {
-                        "value": ""
-                    }
-                ],
-                "pinned": true,
-                "required": true
-            },
-            {
-                "default": "80",
-                "description": "Port for Loadbalancer",
-                "hasOptions": false,
-                "label": "",
-                "name": "loadbalancerPort",
-                "options": [
-                    {
-                        "value": ""
-                    }
-                ],
-                "pinned": true,
-                "required": true
-            }
-        ],
-        "stages": [
-            {
-                "account": "EKS-WEST",
-                "cloudProvider": "kubernetes",
-                "manifestArtifactAccount": "Armory",
-                "manifestArtifactId": "a8c52970-fe92-4759-a645-6602809a4ade",
-                "moniker": {
-                    "app": "realworldcontroller"
-                },
-                "name": "Deploy to Dev",
-                "namespaceOverride": "dev",
-                "refId": "1",
-                "requisiteStageRefIds": [],
-                "skipExpressionEvaluation": false,
-                "source": "artifact",
-                "trafficManagement": {
-                    "enabled": false,
-                    "options": {
-                        "enableTraffic": false,
-                        "services": []
-                    }
-                },
-                "type": "deployManifest"
-            }
-        ],
-        "triggers": [],
-        "updateTs": "1583280990000"
-    },
+                {
+                    "default": "80",
+                    "description": "Port for Loadbalancer",
+                    "hasOptions": false,
+                    "label": "",
+                    "name": "loadbalancerPort",
+                    "options": [
+                        {
+                            "value": ""
+                        }
+                    ],
+                    "pinned": true,
+                    "required": true
+                }
+            ],
+            "stages": [
+                {
+                    "account": "EKS-WEST",
+                    "cloudProvider": "kubernetes",
+                    "manifestArtifactAccount": "Armory",
+                    "manifestArtifactId": "a8c52970-fe92-4759-a645-6602809a4ade",
+                    "moniker": {
+                        "app": "realworldcontroller"
+                    },
+                    "name": "Deploy to Dev",
+                    "namespaceOverride": "dev",
+                    "refId": "1",
+                    "requisiteStageRefIds": [],
+                    "skipExpressionEvaluation": false,
+                    "source": "artifact",
+                    "trafficManagement": {
+                        "enabled": false,
+                        "options": {
+                            "enableTraffic": false,
+                            "services": []
+                        }
+                    },
+                    "type": "deployManifest"
+                }
+            ],
+            "triggers": [],
+            "updateTs": "1583280990000"
+        }
+    ],
     "spec": {
         "permissions": {
             "READ": [
